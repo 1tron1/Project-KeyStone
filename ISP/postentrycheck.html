@@ -1,0 +1,46 @@
+<html>
+<header>Congratulations you logged in</header>
+
+
+<script type="text/javascript">function function(){
+while(1){
+	setTimeout(function,1000)
+}
+<?php
+//create an ADO connection and open the database
+$conn = new COM("ADODB.Connection");
+$conn->open("our database");
+
+//execute an SQL statement and return a recordset
+$rs = $conn->execute("SELECT Name, Num, timediff FROM Personel");
+$num_columns = $rs->Fields->Count();
+
+echo "<table border='1'>"; 
+echo "<tr><th>Name</th><th>Num</th><th>timediff</th></tr>";
+while (!$rs->EOF) //looping through the recordset (until End Of File)
+{
+echo "<tr>";
+if (Fields(1)=user) {
+ PHPANSWER= $rs->Fields(2)->value  ;
+}
+echo "<par>all done here</par>";
+$rs->MoveNext();
+}
+//close the recordset and the database connection
+$rs->Close();
+$rs = null;
+$conn->Close();
+$conn = null;
+?> 
+
+<?php include("Footer.php"); ?>
+
+		fill=document.getElementbyId(kryptokey).value
+		if(fill=PHPANSWER){
+			alert("Login Succesful")
+		}else{
+			alert("Illegimitate entry key")
+			navigate("http://denied")
+		}
+	</script>
+	</html>
