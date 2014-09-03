@@ -5,6 +5,6 @@ $namefile#declare open
 path (STDIN, ">$namefile")
 while ($text=<STDIN>) {
 	chomp($text);
-	eval=sin($text)
+	eval=sin($text)#sin(x) can be replaced by any function
 }
 close STDOUT
